@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GiftNest | Contact</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-gift"></i>
+<h2>GiftNest</h2>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gifts.html">Gifts</a>
+<a href="about.html">About</a>
+<a href="contact.html" class="active">Contact</a>
+</nav>
+
+<div class="cart">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cart-count">0</span>
+</div>
+
+</header>
+
+<section class="features">
+
+<h2>Contact Us</h2>
+
+<p style="font-size:18px;margin-bottom:30px;">
+We'd love to hear from you! Send us your message.
+</p>
+
+<form style="max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;">
+
+<input type="text" placeholder="Your Name" required
+style="padding:15px;border:1px solid #ccc;border-radius:10px;">
+
+<input type="email" placeholder="Your Email" required
+style="padding:15px;border:1px solid #ccc;border-radius:10px;">
+
+<input type="text" placeholder="Subject"
+style="padding:15px;border:1px solid #ccc;border-radius:10px;">
+
+<textarea rows="6" placeholder="Your Message"
+style="padding:15px;border:1px solid #ccc;border-radius:10px;"></textarea>
+
+<button type="button" class="btn" onclick="sendMessage()">
+Send Message
+</button>
+
+</form>
+
+<br><br>
+
+<div class="feature-box">
+
+<div>
+<i class="fa-solid fa-location-dot"></i>
+<h3>Address</h3>
+<p>Tirunelveli, Tamil Nadu, India</p>
+</div>
+
+<div>
+<i class="fa-solid fa-envelope"></i>
+<h3>Email</h3>
+<p>support@giftnest.com</p>
+</div>
+
+<div>
+<i class="fa-solid fa-phone"></i>
+<h3>Phone</h3>
+<p>+91 98765 43210</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 GiftNest | Personalized Gift Shop</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function sendMessage(){
+    alert("✅ Thank you! Your message has been sent successfully.");
+}
+</script>
+
+</body>
+</html>

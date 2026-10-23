@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest | Gifts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-gift"></i>
+        <h2>GiftNest</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gifts.html" class="active">Gifts</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+    </div>
+</header>
+
+<section class="categories">
+
+    <h2>Our Gift Collection</h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search gifts..."
+        style="width:100%;max-width:450px;padding:12px;border-radius:10px;border:1px solid #ccc;margin-bottom:35px;font-size:16px;">
+
+    <div class="category-container" id="productContainer">
+
+        <div class="card product">
+            <img src="images/birthday.jpg">
+            <h3>Birthday Gift Box</h3>
+            <p>₹799</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(0);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/flower.avif">
+            <h3>Flower Bouquet</h3>
+            <p>₹599</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(1);return false;">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/teddy.avif">
+            <h3>Teddy Bear</h3>
+            <p>₹699</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(2);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/surprise.jpg">
+            <h3>Wedding Surprise Box</h3>
+            <p>₹1499</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(3);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/chocolate.jpg">
+            <h3>Chocolate Hamper</h3>
+            <p>₹899</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(4);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/premium.jpg">
+            <h3>Premium Gift Basket</h3>
+            <p>₹1999</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(5);return false">Add to Cart</a>
+        </div>        <div class="card product">
+            <img src="images/perfume.avif">
+            <h3>Luxury Perfume Set</h3>
+            <p>₹1299</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(6);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/toys.avif">
+            <h3>Soft Toy Collection</h3>
+            <p>₹999</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(7);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/card.avif">
+            <h3>Greeting Card Pack</h3>
+            <p>₹299</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(8);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/photo.avif">
+            <h3>Photo Frame Gift</h3>
+            <p>₹549</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(9);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/love.avif">
+            <h3>Love Gift Combo</h3>
+            <p>₹1599</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(10);return false">Add to Cart</a>
+        </div>
+
+        <div class="card product">
+            <img src="images/festival.avif">
+            <h3>Festival Gift Box</h3>
+            <p>₹899</p>
+            <br>
+            <a href="#" class="btn" onclick="addToCart(11);return false">Add to Cart</a>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <button class="btn" onclick="checkout()">Checkout</button>
+
+</section>
+
+<footer>
+    <p>© 2026 GiftNest | Personalized Gift Shop</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const searchBox = document.getElementById("searchBox");
+const products = document.querySelectorAll(".product");
+
+searchBox.addEventListener("keyup", function(){
+
+let value = searchBox.value.toLowerCase();
+
+products.forEach(product=>{
+
+let text = product.innerText.toLowerCase();
+
+if(text.includes(value)){
+product.style.display="block";
+}
+else{
+product.style.display="none";
+}
+
+});
+
+});
+</script>
+
+</body>
+</html>

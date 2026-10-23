@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest | Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>🎁 GiftNest</h2></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gifts.html">Gifts</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+        <div class="cart">🛒 <span id="cart-count">0</span></div>
+    </header>
+
+    <section class="categories">
+        <h2 id="Checkout-heading">Checkout</h2>
+
+        <div id="checkout-details">
+    <h3>Order Summary</h3>
+    <div id="checkout-summary"></div>
+    <h3>Total: <span id="checkout-total">₹0</span></h3>
+</div>
+
+        <form id="checkout-form" onsubmit="placeOrder(event)">
+            <p><label for="customer-name">Full Name</label></p>
+            <input id="customer-name" name="name" required maxlength="100"
+                   style="padding:12px;width:90%;max-width:400px">
+
+            <p><label for="customer-phone">Phone Number</label></p>
+            <input id="customer-phone" name="phone" type="tel"
+                   pattern="[0-9]{10}" title="Enter a 10-digit phone number"
+                   required style="padding:12px;width:90%;max-width:400px">
+
+            <p><label for="customer-address">Delivery Address</label></p>
+            <textarea id="customer-address" name="address" required maxlength="500"
+                      style="padding:12px;width:90%;max-width:400px"></textarea>
+
+            <p><label for="payment-method">Payment Method</label></p>
+            <select id="payment-method" name="payment" required
+                    style="padding:12px;width:90%;max-width:400px">
+                <option value="COD">Cash on Delivery (Demo)</option>
+            </select>
+
+            <p><button type="submit" class="btn">Place Order</button></p>
+        </form>
+
+        <div id="order-success" hidden>
+            <h2>🎉 Order Placed Successfully!</h2>
+            <p>Thank you, <span id="order-customer"></span>!</p>
+            <p>Your demo order number: <strong id="order-number"></strong></p>
+            <p>Your order details have been saved in this browser.</p>
+            <a href="gifts.html" class="btn">Continue Shopping</a>
+        </div>
+    </section>
+
+    <footer><p>© 2026 GiftNest | Personalized Gift Shop</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
